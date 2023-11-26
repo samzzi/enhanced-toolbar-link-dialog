@@ -107,7 +107,9 @@ export default {
 			// don't perform a search if a user entered a link manually
 			if (
 				this.searchTerm.startsWith("http") ||
-				this.searchTerm.startsWith("/")
+				this.searchTerm.startsWith("/") ||
+        this.searchTerm.startsWith("tel") ||
+        this.searchTerm.startsWith("mailto")
 			) {
 				this.pages = [];
 				return;
